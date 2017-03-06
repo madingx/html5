@@ -80,6 +80,7 @@ for (var i = 0; i < navs.length; i++) {
 		var startPos = parseInt(line.style.left);
 		var targetPos = this.offsetLeft;
 		move(startPos, targetPos);
+		//匀速运动
 	}
 }
 
@@ -89,8 +90,10 @@ function move(start, end) {
 	// 根据起点与终点的不同进行取整
 	if (step > 0) {
 		step = Math.ceil(step);
+		//浮点数向上取整.
 	} else {
 		step = Math.floor(step);
+		//浮点数向下取整.
 	}
 	start = start + step;
 	line.style.left = start + 'px';
